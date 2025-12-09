@@ -1,0 +1,80 @@
+openapi: 3.0.4
+info:
+  title: Website to Text
+  description: Website to Text is a simple tool for converting a website to text. It returns the text extracted from the website.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/websitetotext:
+    post:
+      summary: Convert Website to Text
+      description: Website to Text is a simple tool for converting a website to text. It returns the text extracted from the website.
+      operationId: websitetotext
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  date: 
+                  description: Use Amazon EC2 for scalable computing capacity in the AWS Cloud so you can develop and deploy applications without hardware constraints.
+                  title: What is Amazon EC2?
+                  title_alt: What is Amazon EC2?
+                  text: 'Amazon Elastic Compute Cloud (Amazon EC2) provides on-demand, scalable computing capacity in the Amazon Web 		Services (AWS) Cloud. Using Amazon EC2 reduces hardware costs so you can develop and deploy 		applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you 		need, configure security and networking, and manage storage. You can add capacity (scale up) 		to handle compute-heavy tasks, such as monthly or yearly processes, or spikes in website 		traffic. When usage decreases, you can reduce capacity (scale down) again.  An EC2 instance is a virtual server in the AWS Cloud. When you launch an EC2 instance,     	the instance type that you specify determines the hardware available to your instance.      	Each instance type offers a different balance of compute, memory, network, and storage      	resources. For more information, see the Amazon EC2 Instance Types Guide.  Amazon EC2 provides the following high-level features:  Amazon EC2 supports the processing, storage, and transmission  of credit card data by a merchant or service provider, and has been  validated as being compliant with Payment Card Industry (PCI) Data Security Standard (DSS).  For more information about PCI DSS, including how to request a copy of the AWS PCI Compliance Package,  see PCI DSS Level 1.  You can create and manage your Amazon EC2 instances using the following interfaces:  Amazon EC2 provides the following pricing options:  For a complete list of charges and prices for Amazon EC2 and more information about the purchase 			models, see Amazon EC2 pricing.  To create estimates for your AWS use cases, use the AWS Pricing Calculator.  To estimate the cost of transforming Microsoft  workloads to a modern architecture that uses open source and 				cloud-native services deployed on AWS, use the AWS  Modernization Calculator for Microsoft Workloads.  To see your bill, go to the Billing and Cost Management  Dashboard in the AWS Billing and Cost Management  console. Your bill contains links to usage reports that provide details 				about your bill. To learn more about AWS account billing, see AWS Billing and Cost Management User  Guide.  If you have questions concerning AWS billing, accounts, and events, contact AWS Support.  To calculate the cost of a sample provisioned 					environment, see . When calculating the cost of a provisioned 				environment, remember to include incidental costs such as snapshot storage for EBS 				volumes.  You can optimize the cost, security, and performance of your AWS environment 				using AWS Trusted Advisor.  You can use AWS Cost Explorer to analyze the cost and usage of your EC2 instances. You can view  				data up to the last 13 months, and forecast how much you are likely to spend for the next  				12 months. For more information, see 				Analyzing your costs and usage with  AWS Cost Explorer in the AWS Cost Management User Guide.'
+                  language: en
+                  publisher: 
+                  url: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: The URL of the website to convert to text
+                  example: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts
+              required:
+              - url
+              example:
+                url: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
