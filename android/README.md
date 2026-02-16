@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:websitetotext-api:1.1.13'
+    implementation 'com.github.apiverve:websitetotext-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ WebsitetoTextAPIClient client = new WebsitetoTextAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("url", "");
+    parameters.put("url", "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
