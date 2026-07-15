@@ -4,23 +4,35 @@ declare module '@apiverve/websitetotext' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface websitetotextResponse {
     status: string;
     error: string | null;
     data: WebsitetoTextData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface WebsitetoTextData {
       date:        null;
-      description: string;
-      title:       string;
-      titleAlt:    string;
-      text:        string;
-      language:    string;
+      description: null | string;
+      title:       null | string;
+      titleAlt:    null | string;
+      text:        null | string;
+      language:    null | string;
       publisher:   null;
-      url:         string;
+      url:         null | string;
   }
 
   export default class websitetotextWrapper {
