@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/websitetotext",
-  "version": "1.2.0",
-  "description": "Website to Text is a simple tool for converting a website to text. It returns the text extracted from the website.",
+  "version": "1.2.2",
+  "description": "Website to Text converts any webpage URL into plain text stripped of HTML tags. It returns the extracted body copy, page title, meta description, publication date, and detected language code.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "website to text", "website to text api", "website to text tool", "website to text software", "website to text service"
+    "website to text api", "webpage content api", "website to json", "convert url to text", "extract text from webpage"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/websitetotext-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/websitetotext?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/websitetotext?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
