@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Website to Text
   description: >-
-    Website to Text is a simple tool for converting a website to text. It
-    returns the text extracted from the website.
+    Website to Text converts any webpage URL into plain text stripped of HTML
+    tags. It returns the extracted body copy, page title, meta description,
+    publication date, and detected language code.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/websitetotext:
     post:
-      summary: Convert Website to Text
+      summary: Website to Text
       description: Convert a given webiste content to simple text
       operationId: websitetotext
       parameters: []
