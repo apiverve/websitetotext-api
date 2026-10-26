@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/websitetotext",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Website to Text converts any webpage URL into plain text stripped of HTML tags. It returns the extracted body copy, page title, meta description, publication date, and detected language code.",
   "main": "index.js",
   "types": "index.d.ts",
